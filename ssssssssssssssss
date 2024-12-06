@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <h4 class="all-message-from-c">{{$studentMessage->title}}</h4>
+
+        <div class="col-md-12 d-flex justify-content-between all-message">
+            @if(!empty($studentMessage))
+            <div class="col-md-4 allchairman">
+                <img src="{{asset('storage/message/'.$studentMessage->image)}}" alt="flag" class="all-chairman-img" />
+                <h4 class="all-c-name text-capitalize">{{$studentMessage->name}}</h4>
+            </div>
+            <div class="col-md-8 allchairman-details">
+                <p class="all-c-message">{!!$studentMessage->message!!}</p>
+            </div>
+            @endif
+        </div>
+    </div>
+</div>

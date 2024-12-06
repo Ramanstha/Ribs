@@ -1,0 +1,7 @@
+[02-Nov-2022 14:43:41 UTC] PHP Warning:  require(/home24/ksc/public_html/../ksc/vendor/autoload.php): failed to open stream: No such file or directory in /home24/ksc/public_html/index.php on line 34
+[02-Nov-2022 14:43:41 UTC] PHP Warning:  require(/home24/ksc/public_html/../ksc/vendor/autoload.php): failed to open stream: No such file or directory in /home24/ksc/public_html/index.php on line 34
+[02-Nov-2022 14:43:41 UTC] PHP Fatal error:  require(): Failed opening required '/home24/ksc/public_html/../ksc/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home24/ksc/public_html/index.php on line 34
+[02-Nov-2022 14:47:50 UTC] PHP Warning:  require(/home24/ksc/public_html/../ksc/vendor/autoload.php): failed to open stream: No such file or directory in /home24/ksc/public_html/index.php on line 34
+[02-Nov-2022 14:47:50 UTC] PHP Warning:  require(/home24/ksc/public_html/../ksc/vendor/autoload.php): failed to open stream: No such file or directory in /home24/ksc/public_html/index.php on line 34
+[02-Nov-2022 14:47:50 UTC] PHP Fatal error:  require(): Failed opening required '/home24/ksc/public_html/../ksc/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php74/root/usr/share/pear') in /home24/ksc/public_html/index.php on line 34
+[06-Nov-2022 07:29:02 UTC] PHP Warning:  symlink(): File exists in /home24/ksc/public_html/symlink.php on line 4
