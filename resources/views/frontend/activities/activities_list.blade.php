@@ -6,11 +6,11 @@
  <div class="container-fluid page-header" style="margin-bottom: 90px;">
     <div class="container">
         <div class="d-flex flex-column justify-content-center" style="min-height: 300px">
-            <h3 class="display-4 text-white text-uppercase">Blog</h3>
+            <h3 class="display-4 text-white text-uppercase">Activities</h3>
             <div class="d-inline-flex text-white">
-                <p class="m-0 text-uppercase"><a class="text-white" href="">Home</a></p>
+                <p class="m-0 text-uppercase"><a class="text-white" href="{{route('Home')}}">Home</a></p>
                 <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                <p class="m-0 text-uppercase">Blog</p>
+                <p class="m-0 text-uppercase">Activities</p>
             </div>
         </div>
     </div>
@@ -26,55 +26,28 @@
                 <div class="row pb-3">
                     <div class="col-lg-6 mb-4">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/blog-1.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('frontend/img/a1.jpg')}}" alt="">
                             <a class="blog-overlay text-decoration-none" href="">
-                                <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                                <p class="text-primary m-0">Jan 01, 2050</p>
+                                <h5 class="text-white mb-3">Pre-Teen DSA Dancing Star</h5>
+                                <p class="text-primary m-0">Jan 28, 2019</p>
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/blog-2.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('frontend/img/a2.jpg')}}" alt="">
                             <a class="blog-overlay text-decoration-none" href="">
-                                <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                                <p class="text-primary m-0">Jan 01, 2050</p>
+                                <h5 class="text-white mb-3">Celebrating Sarswoti Puja</h5>
+                                <p class="text-primary m-0">Jan 01, 2020</p>
                             </a>
                         </div>
                     </div>
                     <div class="col-lg-6 mb-4">
                         <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/blog-3.jpg" alt="">
+                            <img class="img-fluid" src="{{asset('frontend/img/a3.jpg')}}" alt="">
                             <a class="blog-overlay text-decoration-none" href="">
-                                <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                                <p class="text-primary m-0">Jan 01, 2050</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/blog-1.jpg" alt="">
-                            <a class="blog-overlay text-decoration-none" href="">
-                                <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                                <p class="text-primary m-0">Jan 01, 2050</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/blog-2.jpg" alt="">
-                            <a class="blog-overlay text-decoration-none" href="">
-                                <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                                <p class="text-primary m-0">Jan 01, 2050</p>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 mb-4">
-                        <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                            <img class="img-fluid" src="img/blog-3.jpg" alt="">
-                            <a class="blog-overlay text-decoration-none" href="">
-                                <h5 class="text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita at ut clita</h5>
-                                <p class="text-primary m-0">Jan 01, 2050</p>
+                                <h5 class="text-white mb-3">Food Fastival</h5>
+                                <p class="text-primary m-0">Jan 31, 2020</p>
                             </a>
                         </div>
                     </div>
@@ -104,12 +77,12 @@
 
             <div class="col-lg-4 mt-5 mt-lg-0">
                 <!-- Author Bio -->
-                <div class="d-flex flex-column text-center bg-dark rounded mb-5 py-5 px-4">
+                {{-- <div class="d-flex flex-column text-center bg-dark rounded mb-5 py-5 px-4">
                     <img src="img/user.jpg" class="img-fluid rounded-circle mx-auto mb-3" style="width: 100px;">
                     <h3 class="text-primary mb-3">John Doe</h3>
                     <h3 class="text-uppercase mb-4" style="letter-spacing: 5px;">Tag Cloud</h3>
                     <p class="text-white m-0">Conset elitr erat vero dolor ipsum et diam, eos dolor lorem, ipsum sit no ut est  ipsum erat kasd amet elitr</p>
-                </div>
+                </div> --}}
 
                 <!-- Search Form -->
                 <div class="mb-5">

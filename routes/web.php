@@ -294,6 +294,10 @@ Route::get('/ribs-message',[App\Http\Controllers\User\AboutUsController::class,'
 Route::get('/ribs-message-details/{id}',[App\Http\Controllers\User\AboutUsController::class,'getMessageDetails'])->name('ribs.message.details');
 Route::get('/message-details/{id}',[App\Http\Controllers\User\AboutUsController::class,'getribsMessageDetails'])->name('student.message.details');
 
+
+/****** Event/activities ******/ 
+Route::get('/ribs-activities',[App\Http\Controllers\User\ActivitiesController::class,'getactivities'])->name('ribs.activities');
+
 /****** notic and news ******/ 
 Route::get('/download-notices-ribs',[App\Http\Controllers\User\NoticeController::class,'allNotice'])->name('all.notice');
 Route::get('/notice-download/{image}',[App\Http\Controllers\User\NoticeController::class,'noticeDownload'])->name('notice.download');

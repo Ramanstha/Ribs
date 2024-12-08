@@ -76,7 +76,7 @@
 </div>
 <!-- Academic End -->
 
-<!-- Courses Start -->
+<!-- Facilities Start -->
 <div class="container-fluid">
     <div class="container py-5">
         <div class="text-center mb-5">
@@ -87,12 +87,12 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="rounded overflow-hidden mb-2">
                     <img class="img-fluid" src="{{asset('frontend/img/library.jpeg')}}" alt="">
-                    <div class="bg-secondary p-4">
+                    <div class="bg-dark p-4">
                         {{-- <div class="d-flex justify-content-between mb-3">
                             <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                             <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                         </div> --}}
-                        <a class="h5" href="">Library</a>
+                        <a class="h5 text-white" href="">Library</a>
                         {{-- <div class="border-top mt-4 pt-4">
                             <div class="d-flex justify-content-between">
                                 <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
@@ -106,12 +106,12 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="rounded overflow-hidden mb-2">
                     <img class="img-fluid" src="{{asset('frontend/img/bus.jpeg')}}" alt="">
-                    <div class="bg-secondary p-4">
+                    <div class="bg-dark p-4">
                         {{-- <div class="d-flex justify-content-between mb-3">
                             <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                             <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                         </div> --}}
-                        <a class="h5" href="">Transportation</a>
+                        <a class="h5 text-white" href="">Transportation</a>
                         {{-- <div class="border-top mt-4 pt-4">
                             <div class="d-flex justify-content-between">
                                 <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
@@ -125,12 +125,12 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="rounded overflow-hidden mb-2">
                     <img class="img-fluid" src="{{asset('frontend/img/food.jpeg')}}" alt="">
-                    <div class="bg-secondary p-4">
+                    <div class="bg-dark p-4">
                         {{-- <div class="d-flex justify-content-between mb-3">
                             <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
                             <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
                         </div> --}}
-                        <a class="h5" href="">Food and Nutrition</a>
+                        <a class="h5 text-white" href="">Food and Nutrition</a>
                         {{-- <div class="border-top mt-4 pt-4">
                             <div class="d-flex justify-content-between">
                                 <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
@@ -144,7 +144,7 @@
         </div>
     </div>
 </div>
-<!-- Courses End -->
+<!-- Facilities End -->
 
 <!-- Registration Start -->
 <div class="bg-registration py-5" style="margin: 90px 0;">
@@ -206,7 +206,7 @@
         </div>
         <div class="owl-carousel gallery-carousel">
             @foreach ($getgallery as $gallery)
-            <div class="gallery-item border rounded p-4">
+            <div class="gallery-item border rounded p-3">
                 <div class="d-flex align-items-center">
                     <a href="{{asset('storage/galleryfeestructure/main/'.$gallery->image)}}">
                         <img class="img-fluid"
@@ -225,7 +225,7 @@
     <div class="container pt-5 pb-3">
         <div class="text-center mb-5">
             <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Teachers</h5>
-            <h1>Meet Our Teachers</h1>
+            <h1>Meet Our Team</h1>
         </div>
         <div class="row">
             <div class="col-md-6 col-lg-3 text-center team mb-4">

@@ -14,8 +14,8 @@ use App\Models\Testimonial;
 class AboutUsController extends Controller
 {
    public function AboutUs(){
-    $aboutUs=Aboutus::orderBy('id','desc')->get();
-    return view('frontend.aboutus.index',compact('aboutUs'));
+    $getaboutus=Aboutus::orderBy('id','desc')->First();
+    return view('frontend.aboutus.index',compact('getaboutus'));
    }
 
    public function academicProgramsDetails($id){

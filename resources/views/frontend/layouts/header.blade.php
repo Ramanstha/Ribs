@@ -86,26 +86,32 @@ $publication=Publication::orderBy('id','asc')->where('status',1)->get();
 
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Academic</a>
-                            @foreach ($getacademic as $academic)
                             <div class="dropdown-menu rounded-0 m-0">
-                                @if($getacademic && $academic->title === 'pre-primary')
+                                @foreach ($getacademic as $academic)
+                                @switch($academic->title)
+                                @case('pre-primary')
                                 <a href="{{ route('academic.details', ['id' => $academic->id]) }}"
                                     class="dropdown-item">Pre-Primary</a>
-                                @endif
-                                @if($academic && $academic->title === 'primary')
+                                @break
+
+                                @case('primary')
                                 <a href="{{ route('academic.details', ['id' => $academic->id]) }}"
                                     class="dropdown-item">Primary </a>
-                                @endif
-                                @if($academic && $academic->title === 'secondary')
+                                @break
+
+                                @case('secondary')
                                 <a href="{{ route('academic.details', ['id' => $academic->id]) }}"
                                     class="dropdown-item">Secondary</a>
-                                @endif
-                                @if($academic && $academic->title === 'higher secondary')
+                                @break
+
+                                @case('higher secondary')
                                 <a href="{{ route('academic.details', ['id' => $academic->id]) }}"
                                     class="dropdown-item">Higher Secondary</a>
-                                @endif
+                                @break
+
+                                @endswitch
+                                @endforeach
                             </div>
-                            @endforeach
                         </div>
 
                         <a href="{{route('gallery')}}"
@@ -120,8 +126,8 @@ $publication=Publication::orderBy('id','asc')->where('status',1)->get();
                             </div>
                         </div>
 
-                        <a href="{{route('gallery')}}"
-                            class="nav-item nav-link {{ Request::routeIs('gallery') ? 'active' : '' }}">Activities</a>
+                        <a href="{{route('ribs.activities')}}"
+                            class="nav-item nav-link {{ Request::routeIs('ribs.activities') ? 'active' : '' }}">Activities</a>
 
                         {{-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>
