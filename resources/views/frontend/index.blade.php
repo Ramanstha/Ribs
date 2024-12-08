@@ -198,7 +198,7 @@
 <!-- Registration End -->
 
 <!-- gallery Start -->
-<div class="container-xxl" data-wow-delay="0.1s">
+<div class="container-xxl py-5" data-wow-delay="0.1s">
     <div class="container">
         <div class="text-center">
             <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Gallery</h5>
