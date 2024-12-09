@@ -231,14 +231,14 @@ Route::post('/publication-update/{id}',[PublicationController::class,'Update'])-
 Route::get('/publication-delete/{id}',[PublicationController::class,'Delete'])->name('delete.publication');
 Route::get('/publication-status',[PublicationController::class,'publicationstatus'])->name('status.publication');
 
-//testimonial
-Route::get('/testimonial-create',[App\Http\Controllers\backend\TestimonialController::class,'Testimonial'])->name('create.testimonial');
-Route::post('/testimonial-store',[App\Http\Controllers\backend\TestimonialController::class,'Store'])->name('store.testimonial');
-Route::get('/testimonial-view',[App\Http\Controllers\backend\TestimonialController::class,'View'])->name('view.testimonial');
-Route::get('/testimonial-edit/{id}',[App\Http\Controllers\backend\TestimonialController::class,'Edit'])->name('edit.testimonial');
-Route::post('/testimonial-update/{id}',[App\Http\Controllers\backend\TestimonialController::class,'Update'])->name('update.testimonial');
-Route::get('/testimonial-delete/{id}',[App\Http\Controllers\backend\TestimonialController::class,'Delete'])->name('delete.testimonial');
-Route::get('/testimonial-status',[App\Http\Controllers\backend\TestimonialController::class,'testimonialstatus'])->name('status.testimonial');
+//Facilities
+Route::get('/facilities-create',[App\Http\Controllers\backend\FacilitiesController::class,'Facilities'])->name('create.facilities');
+Route::post('/facilities-store',[App\Http\Controllers\backend\FacilitiesController::class,'Store'])->name('store.facilities');
+Route::get('/facilities-view',[App\Http\Controllers\backend\FacilitiesController::class,'View'])->name('view.facilities');
+Route::get('/facilities-edit/{id}',[App\Http\Controllers\backend\FacilitiesController::class,'Edit'])->name('edit.facilities');
+Route::post('/facilities-update/{id}',[App\Http\Controllers\backend\FacilitiesController::class,'Update'])->name('update.facilities');
+Route::get('/facilities-delete/{id}',[App\Http\Controllers\backend\FacilitiesController::class,'Delete'])->name('delete.facilities');
+Route::get('/facilities-status',[App\Http\Controllers\backend\FacilitiesController::class,'facilitiesstatus'])->name('status.facilities');
 
 // category
 Route::get('/all-category',[App\Http\Controllers\backend\CategoryController::class,'viewAllCategory'])->name('view.category');
@@ -297,6 +297,7 @@ Route::get('/message-details/{id}',[App\Http\Controllers\User\AboutUsController:
 
 /****** Event/activities ******/ 
 Route::get('/ribs-activities',[App\Http\Controllers\User\ActivitiesController::class,'getactivities'])->name('ribs.activities');
+Route::get('/ribs-facilities-detail/{id}',[App\Http\Controllers\User\ActivitiesController::class,'getfacilities'])->name('ribs.facilities');
 
 /****** notic and news ******/ 
 Route::get('/download-notices-ribs',[App\Http\Controllers\User\NoticeController::class,'allNotice'])->name('all.notice');

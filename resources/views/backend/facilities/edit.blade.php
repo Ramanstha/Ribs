@@ -4,20 +4,20 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h2>Testimonial</h2>
+                <h2>Facilities</h2>
                 <div class="row">
                     <div class="col-lg-12">
                         @if(Session::has('message'))
                         <span class="text-primary">{{Session::get('message')}}</span>
                         @endif
-                        <form action="{{route('update.testimonial',$data->id)}}" method="post"
+                        <form action="{{route('update.facilities',$data->id)}}" method="post"
                             enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Name<span
+                                <label for="simpleinput" class="form-label">Title<span
                                         class="text-danger">*</span></label>
-                                <input type="text" id="simpleinput" class="form-control" placeholder="Name"
-                                    name="Name" value="{{ $data->name }}">
+                                <input type="text" id="simpleinput" class="form-control"
+                                    name="title" value="{{ $data->title }}">
                             </div>
 
                             <div class="mb-3">
@@ -25,19 +25,9 @@
                                         class="text-danger">*</span></label>
                                 <input type="file" id="simpleinput" class="form-control" name="image"
                                     value="{{ $data->image }}">
-                                <iframe src="{{asset('storage/testimonial/'.$data->image)}}" height="200"
+                                <iframe src="{{asset('storage/facilities/'.$data->image)}}" height="200"
                                     width="150"></iframe>
                                 @error('image')
-                                <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">grade <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" id="simpleinput" class="form-control" placeholder="grade"
-                                    name="grade" value="{{ $data->grade }}">
-                                @error('grade')
                                 <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -49,7 +39,7 @@
                             </div>
 
                             <button type="submit" class="btn w-sm btn-success waves-effect waves-light mt-4">Update
-                                Testimonial</button>
+                                Facilities</button>
                         </form>
                     </div> <!-- end col -->
                 </div>

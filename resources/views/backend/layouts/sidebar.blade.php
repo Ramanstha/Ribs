@@ -53,11 +53,11 @@
                     </a>
                     <div class="collapse" id="aboutus">
                         <ul class="nav-second-level">
-                            <li>
+                            {{-- <li>
                                 <a href="{{route('view.aboutcategory')}}">
                                     <span> Category </span>
                                 </a>
-                            </li>
+                            </li> --}}
                             {{-- <li>
                                 <a href="{{route('view.aboutsubcategory')}}">
                                     <span> Sub Category </span>
@@ -94,19 +94,19 @@
                     </div>
                 </li>
 
-                <li>
+                {{-- <li>
                     <a href="{{route('view.notice')}}">
                         <i class="fa-solid fa-graduation-cap"></i>
                         <span> Notice/Downloads/Events</span>
                     </a>
-                </li>
+                </li> --}}
 
-                <li>
+                {{-- <li>
                     <a href="{{route('view.publication')}}">
                         <i class="fa-solid fa-graduation-cap"></i>
                         <span> Publication</span>
                     </a>
-                </li>
+                </li> --}}
 
                 <li>
                     <a href="#gallery" data-bs-toggle="collapse">
@@ -122,7 +122,7 @@
                             </li>
                             <li>
                                 <a href="{{route('view.galleryandfee')}}">
-                                    <span> Gallery and Fee Structure </span>
+                                    <span> Gallery </span>
                                 </a>
                             </li>
                         </ul>
@@ -136,7 +136,7 @@
                     </a>
                     <div class="collapse" id="program">
                         <ul class="nav-second-level">
-                            <li>
+                            {{-- <li>
                                 <a href="{{route('view.programcategory')}}">
                                     <span> Category </span>
                                 </a>
@@ -146,7 +146,7 @@
                                 <a href="{{route('view.programsubcategory')}}">
                                     <span> SubCategory </span>
                                 </a>
-                            </li>
+                            </li> --}}
 
                             <li>
                                 <a href="{{route('view.academic')}}">
@@ -165,42 +165,42 @@
                 </li>
 
                 <li>
-                    <a href="{{route('view.testimonial')}}">
+                    <a href="{{route('view.facilities')}}">
                         <i class="fa-solid fa-children"></i>
-                        <span> Testimonial </span>
+                        <span> Facilities </span>
                     </a>
                 </li>
 
-                <li>
+                {{-- <li>
                     <a href="{{route('view.category')}}">
                         <i class="fa-solid fa-chart-line"></i>
                         <span> Gov/IQAC/RMC/Downloads Category </span>
                     </a>
-                </li>
-                <li>
+                </li> --}}
+                {{-- <li>
                     <a href="{{route('view.governance')}}">
                         <i class="fa-solid fa-chart-line"></i>
                         <span> Governance/IQAC/RMC </span>
                     </a>
-                </li>
+                </li> --}}
                 <li>
                     <a href="{{route('view_user.contact')}}">
                         <i class="fa-solid fa-users"></i>
                         <span> Feedback/User Message </span>
                     </a>
                 </li>
-                <li>
+                {{-- <li>
                     <a href="{{route('view.applicants')}}">
                         <i class="fa-solid fa-user"></i>
                         <span> Applicants </span>
                     </a>
-                </li>
-                <li>
+                </li> --}}
+                {{-- <li>
                     <a href="{{route('view.applicants')}}">
                         <i class="fa-solid fa-user"></i>
                         <span> Scholarship </span>
                     </a>
-                </li>
+                </li> --}}
             </ul>
         </div>
     </div>

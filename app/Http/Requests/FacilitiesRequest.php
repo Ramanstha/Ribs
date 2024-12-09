@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TestimonialRequest extends FormRequest
+class FacilitiesRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,10 +24,9 @@ class TestimonialRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'grade' => 'required',
+            'title' => 'required',
+            'image' => 'required|mimes:jpg,jpeg,png,jiff|max:2048',
             'description' => 'required',
-            'image' => 'required |mimes:jpg,jpeg,png,jiff',
         ];
     }
 }

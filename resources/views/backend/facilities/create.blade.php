@@ -4,20 +4,20 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h2>Testimonial</h2>
+                <h2>Facilities</h2>
                 <div class="row">
                     <div class="col-lg-12">
                         @if(Session::has('message'))
                         <span class="text-primary">{{Session::get('message')}}</span>
                         @endif
-                        <form action="{{route('store.testimonial')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('store.facilities')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Name<span
+                                <label for="simpleinput" class="form-label">Title<span
                                         class="text-danger">*</span></label>
-                                <input type="text" id="simpleinput" class="form-control" placeholder="name" name="name"
-                                    value="{{ old('name') }}">
-                                @error('name')
+                                <input type="text" id="simpleinput" class="form-control" placeholder="Title" name="title"
+                                    value="{{ old('title') }}">
+                                @error('title')
                                 <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -31,17 +31,7 @@
                                 <span class="text-danger">{{ $message }}</span>
                                 @enderror
                             </div>
-
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Grade <span
-                                        class="text-danger">*</span></label>
-                                <input type="text" id="simpleinput" class="form-control" placeholder="grade"
-                                    name="grade" value="{{ old('grade') }}">
-                                @error('grade')
-                                <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-
+                            
                             <div class="mb-3">
                                 <label for="example-textarea" class="form-label">Description <span
                                         class="text-danger">*</span></label>
@@ -53,7 +43,7 @@
                             </div>
 
                             <button type="submit" class="btn w-sm btn-success waves-effect waves-light mt-4">Add
-                                Testimonial</button>
+                                Facilities</button>
                         </form>
                     </div> <!-- end col -->
                 </div>

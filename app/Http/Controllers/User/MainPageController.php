@@ -10,7 +10,7 @@ use App\Models\Message;
 use App\Models\ProgramCategory;
 use App\Models\Notice;
 use App\Models\Video;
-use App\Models\Testimonial;
+use App\Models\Facilities;
 use App\Models\Galleryfeestructure;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
@@ -32,8 +32,8 @@ class MainPageController extends Controller
         $getnonacademicprogram=ProgramCategory::with('category')->orderBy('id','desc')->where([['title','non-academic']])->get();
         $getprogram=ProgramCategory::with('category')->orderBy('id','desc')->where([['title','+2']])->get();
         $getgallery=Galleryfeestructure::orderBy('id','desc')->where([['type','gallery']])->get();
-        $gettestimonial=Testimonial::orderBy('id','desc')->get();
-        return view('frontend.index',compact('gettestimonial','getaboutus','getacademic','getbanner','getvideo','getnotice','getnews','getmessage','getteachermessage','getstudentmessage','getmasterprogram','getbechlorprogram','getprogram','getgallery','getnonacademicprogram'));
+        $getfacilities=Facilities::orderBy('id','desc')->get();
+        return view('frontend.index',compact('getfacilities','getaboutus','getacademic','getbanner','getvideo','getnotice','getnews','getmessage','getteachermessage','getstudentmessage','getmasterprogram','getbechlorprogram','getprogram','getgallery','getnonacademicprogram'));
     }
     
     public function download($image){

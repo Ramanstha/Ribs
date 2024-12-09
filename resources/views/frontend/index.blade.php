@@ -84,63 +84,16 @@
             <h1>Our Facilities</h1>
         </div>
         <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
+            @foreach ($getfacilities as $facilities)  
+            <div class="col-lg-4 col-md-6 mb-4 ">
                 <div class="rounded overflow-hidden mb-2">
-                    <img class="img-fluid" src="{{asset('frontend/img/library.jpeg')}}" alt="">
+                    <img class="img-fluid" src="{{asset('storage/facilities/'.$facilities->image)}}" alt="">
                     <div class="bg-dark p-4">
-                        {{-- <div class="d-flex justify-content-between mb-3">
-                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                        </div> --}}
-                        <a class="h5 text-white" href="">Library</a>
-                        {{-- <div class="border-top mt-4 pt-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
-                                </h6>
-                                <h5 class="m-0">$99</h5>
-                            </div>
-                        </div> --}}
+                        <a class="h5 text-white text-capitalize" href="{{route('ribs.facilities',$facilities->id)}}">{{$facilities->title}}</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="rounded overflow-hidden mb-2">
-                    <img class="img-fluid" src="{{asset('frontend/img/bus.jpeg')}}" alt="">
-                    <div class="bg-dark p-4">
-                        {{-- <div class="d-flex justify-content-between mb-3">
-                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                        </div> --}}
-                        <a class="h5 text-white" href="">Transportation</a>
-                        {{-- <div class="border-top mt-4 pt-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
-                                </h6>
-                                <h5 class="m-0">$99</h5>
-                            </div>
-                        </div> --}}
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="rounded overflow-hidden mb-2">
-                    <img class="img-fluid" src="{{asset('frontend/img/food.jpeg')}}" alt="">
-                    <div class="bg-dark p-4">
-                        {{-- <div class="d-flex justify-content-between mb-3">
-                            <small class="m-0"><i class="fa fa-users text-primary mr-2"></i>25 Students</small>
-                            <small class="m-0"><i class="far fa-clock text-primary mr-2"></i>01h 30m</small>
-                        </div> --}}
-                        <a class="h5 text-white" href="">Food and Nutrition</a>
-                        {{-- <div class="border-top mt-4 pt-4">
-                            <div class="d-flex justify-content-between">
-                                <h6 class="m-0"><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small>
-                                </h6>
-                                <h5 class="m-0">$99</h5>
-                            </div>
-                        </div> --}}
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </div>
@@ -313,18 +266,18 @@
             <h1> Our Students Says</h1>
         </div>
         <div class="owl-carousel testimonial-carousel">
-            @foreach ($gettestimonial as $testimonial)
+            @foreach ($getstudentmessage as $student)
             <div class="testimonial-item bg-transparent border rounded p-4">
                 <i class="fa fa-quote-left fa-2x text-primary"></i>
-                <a href="{{route('student.message.details',$testimonial->id)}}" class="text-decoration-none text-dark">
-                    <p>{!!Str::limit($testimonial->description,200)!!}</p>
+                <a href="{{route('student.message.details',$student->id)}}" class="text-decoration-none text-dark">
+                    <p>{!!Str::limit($student->message,200)!!}</p>
                 </a>
                 <div class="d-flex align-items-center">
                     <img class="img-fluid flex-shrink-0 rounded-circle"
-                        src="{{asset('storage/testimonial/'.$testimonial->image)}}" style="width: 80px; height: 80px;">
+                        src="{{asset('storage/message/'.$student->image)}}" style="width: 80px; height: 80px;">
                     <div class="pl-3">
-                        <h5 class="mb-1">{{$testimonial->name}}</h5>
-                        <small>Grade : {{$testimonial->grade}}</small>
+                        <h5 class="mb-1">{{$student->name}}</h5>
+                        <small>{{$student->title}}</small>
                     </div>
                 </div>
             </div>

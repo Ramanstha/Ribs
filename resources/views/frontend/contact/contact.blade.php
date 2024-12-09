@@ -21,8 +21,8 @@ $getcontact = Contact::first();
 </div>
 <!-- Header End -->
 
-<div class="container py-4">
-    <div class="usercontact-row row">
+<div class="container-fluid usercontact py-5">
+    <div class="row">
         <div class="col-md-6 col-sm-12">
             @if (!empty($getcontact))
             <iframe src="{{$getcontact->map}}" frameborder="0" height="590px" width="100%">{{$getcontact->map}}</iframe>

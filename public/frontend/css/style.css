@@ -4089,6 +4089,12 @@ input[type="button"].btn-block {
   text-align: center;
 }
 
+.dropdown-item:hover{
+  background-color: #cbc8e9;
+  color: #FF6600;
+  font-weight: bold;
+}
+
 .tab-content > .tab-pane {
   display: none;
 }
@@ -9934,6 +9940,10 @@ h6,
 
 .about p{
   color: white;
+}
+
+.usercontact{
+  background: #D8E0E7;
 }
 
 

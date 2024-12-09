@@ -26,9 +26,9 @@ $getaffiliation = Affiliations::where('status',1)->get();
                     @if (!empty($getsitesetting))
                     <img class="ml-5" src="{{asset('storage/sitesetting/'.$getsitesetting->logo)}}">
                     @endif
-                    <p>{!!$getcontact->description!!}</p>
-                    <p><i class="fa fa-phone-alt mr-2"></i>{{$getcontact->phone}}</p>
-                    <p><i class="fa fa-envelope mr-2"></i>{{$getcontact->email}}</p>
+                    <p1 class="text-white">{!!$getcontact->description!!}</p1>
+                    <p class="text-white"><i class="fa fa-phone-alt mr-2"></i>{{$getcontact->phone}}</p>
+                    <p class="text-white"><i class="fa fa-envelope mr-2"></i>{{$getcontact->email}}</p>
                 </div>
                 @endif
                 <div class="col-md-6">

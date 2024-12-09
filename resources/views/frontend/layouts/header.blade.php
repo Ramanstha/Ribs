@@ -85,7 +85,9 @@ $publication=Publication::orderBy('id','asc')->where('status',1)->get();
                             class="nav-item nav-link {{ Request::routeIs('aboutus') ? 'active' : '' }}">About</a>
 
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Academic</a>
+                            <a href="#"
+                                class="nav-link dropdown-toggle  {{ Request::routeIs('academic.details') ? 'active' : '' }}"
+                                data-toggle="dropdown">Academic</a>
                             <div class="dropdown-menu rounded-0 m-0">
                                 @foreach ($getacademic as $academic)
                                 @switch($academic->title)

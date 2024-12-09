@@ -6,8 +6,8 @@
             <div class="card-body">
                 <div class="row mb-2">
                     <div class="col-sm-4">
-                        <a href="{{route('create.testimonial')}}" class="btn btn-danger mb-2"><i
-                                class="fa fa-plus-circle me-2"></i> Testimonial</a>
+                        <a href="{{route('create.facilities')}}" class="btn btn-danger mb-2"><i
+                                class="fa fa-plus-circle me-2"></i> Facilities</a>
                     </div>
                 </div>
                 @if(Session::has('message'))
@@ -20,8 +20,7 @@
                             <tr class="bg-primary text-white">
                                 <th>S.N</th>
                                 {{-- <th>File</th> --}}
-                                <th>Name</th>
-                                <th>Grade</th>
+                                <th>Title</th>
                                 <th>Description</th>
                                 <th>Status</th>
                                 <th style="width: 75px;">Action</th>
@@ -31,18 +30,17 @@
                             @foreach($file as $key=>$site)
                             <tr>
                                 <td>{{$key+1}}</td>
-                                <td class="text-capitalize">{{$site->name}}</td>
-                                <td class="text-capitalize">{{$site->grade}}</td>
+                                <td class="text-capitalize">{{$site->title}}</td>
                                 <td>{!!Str::limit($site->description,20)!!}</td>
                                 <td>
-                                    <input data-id="{{$site->id}}" class="testimonial" type="checkbox"
+                                    <input data-id="{{$site->id}}" class="facilities" type="checkbox"
                                         data-onstyle="success" data-offstyle="danger" data-toggle="toggle"
                                         data-on="Active" data-off="InActive" {{ $site->status ? 'checked' : '' }}>
                                 </td>
                                 <td>
-                                    <a href="{{route('edit.testimonial',$site->id)}}" title="Edit"><i
+                                    <a href="{{route('edit.facilities',$site->id)}}" title="Edit"><i
                                             class="fa fa-edit "></i></a>
-                                    <a href="{{route('delete.testimonial',$site->id)}}"
+                                    <a href="{{route('delete.facilities',$site->id)}}"
                                         onclick="return confirm('Are you sure you want to delete?')" id="sa-params"
                                         title="Delete"><i class="fa fa-trash mx-1 text-danger"></i>
                                     </a>

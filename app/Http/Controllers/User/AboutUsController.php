@@ -8,7 +8,7 @@ use App\Models\Aboutus;
 use App\Models\Academic;
 use App\Models\Message;
 use App\Models\ProgramSubCategory;
-use App\Models\Testimonial;
+// use App\Models\Testimonial;
 
 
 class AboutUsController extends Controller
@@ -28,7 +28,7 @@ class AboutUsController extends Controller
    }
 
    public function getribsMessageDetails($id){
-      $studentMessage=Testimonial::findOrFail($id);
+      $studentMessage=Message::findOrFail($id);
       if(!$studentMessage){
          abort(404);
       }

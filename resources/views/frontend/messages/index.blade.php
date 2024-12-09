@@ -21,12 +21,12 @@
         <div class="col-md-12 d-flex justify-content-between all-message">
             @if(!empty($studentMessage))
             <div class="col-md-4">
-                <img src="{{asset('storage/testimonial/'.$studentMessage->image)}}" height="250px" width="250px"/>
+                <img src="{{asset('storage/message/'.$studentMessage->image)}}" height="250px" width="250px"/>
                 <h4 class="text-capitalize t-name">{{$studentMessage->name}}</h4>
-                <h4 class="t-grade">Grade : {{$studentMessage->grade}}</h4>
+                <h4 class="t-grade">{{$studentMessage->title}}</h4>
             </div>
             <div class="col-md-8">
-                <p class="text-black">{!!$studentMessage->description!!}</p>
+                <p class="text-black">{!!$studentMessage->message!!}</p>
             </div>
             @endif
         </div>
