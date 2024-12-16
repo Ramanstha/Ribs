@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('phone');
             $table->string('email');
+            $table->longText('address')->nullable();
             $table->longText('map');
             $table->longText('description');
             $table->timestamps();

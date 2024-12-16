@@ -43,6 +43,12 @@
                             </div>
 
                             <div class="mb-3">
+                                <label for="simpleinput" class="form-label">Address</label>
+                                <textarea type="text" id="address" class="form-control" name="address"
+                                    value="{{$data->address}}">{{$data->address}}</textarea>
+                            </div>
+
+                            <div class="mb-3">
                                 <label for="simpleinput" class="form-label">Description<span
                                         class="text-danger">*</span></label>
                                 <textarea type="text" id="description" class="form-control" name="description"
@@ -64,6 +70,7 @@
 </div>
 <script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
 <script>
+    CKEDITOR.replace('address');
     CKEDITOR.replace('description');
 </script>
 @endsection

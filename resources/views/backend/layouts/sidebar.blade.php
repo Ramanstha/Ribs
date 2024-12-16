@@ -53,11 +53,11 @@
                     </a>
                     <div class="collapse" id="aboutus">
                         <ul class="nav-second-level">
-                            {{-- <li>
+                            <li>
                                 <a href="{{route('view.aboutcategory')}}">
                                     <span> Category </span>
                                 </a>
-                            </li> --}}
+                            </li>
                             {{-- <li>
                                 <a href="{{route('view.aboutsubcategory')}}">
                                     <span> Sub Category </span>
@@ -94,12 +94,12 @@
                     </div>
                 </li>
 
-                {{-- <li>
+                <li>
                     <a href="{{route('view.notice')}}">
                         <i class="fa-solid fa-graduation-cap"></i>
                         <span> Notice/Downloads/Events</span>
                     </a>
-                </li> --}}
+                </li>
 
                 {{-- <li>
                     <a href="{{route('view.publication')}}">

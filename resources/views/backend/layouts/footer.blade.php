@@ -4,7 +4,7 @@
             <div class="col-md-6">
                 <script>
                     document.write(new Date().getFullYear())
-                </script> &copy; RIBS <a href="{{ url('/') }}">ribs.edu.np</a>
+                </script> &copy; ABC <a href="{{ url('/') }}">abc.edu.np</a>
             </div>
             
         </div>

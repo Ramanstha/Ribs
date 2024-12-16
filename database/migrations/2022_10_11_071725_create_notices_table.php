@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('title');
             $table->string('image')->nullable();
             $table->longText('description');
-            $table->string('date');
-            $table->string('time')->nullable();
+            // $table->string('date');
+            // $table->string('time')->nullable();
             $table->string('type');
             $table->boolean('status')->default('0');
             $table->timestamps();

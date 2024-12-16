@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="utf-8">
-    <title>RIBS | Rhododendon int'l.B.School</title>
+    <title>ABC | School</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="RIBS" name="keywords">
-    <meta content="RIBS" name="description">
+    <meta content="ABC" name="keywords">
+    <meta content="ABC" name="description">
 
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{asset('frontend/img/logo.png')}}" />

@@ -21,6 +21,7 @@
                                 <th>S.N</th>
                                 <th>Phone</th>
                                 <th>Email</th>
+                                <th>Address</th>
                                 <th style="width: 75px;">Action</th>
                             </tr>
                         </thead>
@@ -30,6 +31,7 @@
                                 <td>{{$key+1}}</td>
                                 <td>{{$site->phone}}</td>
                                 <td>{{$site->email}}</td>
+                                <td>{!!$site->address!!}</td>
                                 <td>
                                     <a href="{{route('edit.contact',$site->id)}}" title="Edit"><i class="fa fa-edit "></i></a>
                                     <a href="{{route('delete.contact',$site->id)}}" onclick="return confirm('Are you sure you want to delete?')" id="sa-params"

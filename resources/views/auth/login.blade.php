@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-    <title>Log In | RIBS-Rhododendron-International-Boarding-School</title>
+    <title>Log In | School</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -37,7 +37,7 @@
                                             <img src="{{asset('backend/images/logo.png')}}" alt="" height="100">
                                         </span>
                                     </a>
-                                    <h4 class="fw-bold">Rhododendron International Boarding School</h4>
+                                    <h4 class="fw-bold">Admin School</h4>
                                 </div>
                                 <p class="text-muted mb-4 mt-3">Enter your email address and password to access admin
                                     panel.</p>

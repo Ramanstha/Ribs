@@ -13,7 +13,7 @@
         <div class="carousel-inner">
             @foreach ($getbanner as $index => $banner)
             <div class="carousel-item {{ $index == 0 ? 'active' : '' }}" style="min-height: 300px;">
-                <img class="w-100" src="{{ asset('storage/banner/'.$banner->image) }}" height="700px">
+                <img class="w-100" src="{{ asset('storage/banner/'.$banner->image) }}" height="600px">
                 <div class="carousel-caption d-flex align-items-center justify-content-center">
                     <div class="p-5" style="width: 100%; max-width: 900px;">
                         <h5 class="text-white text-uppercase mb-md-3">Best Online Courses</h5>
@@ -39,7 +39,7 @@
             <div class="about col-lg-7">
                 <div class="text-left mb-4">
                     <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
-                    <h1 class="text-light">{{$getaboutus->title}}</h1>
+                    <h1 class="text-uppercase text-light">{{$getaboutus->title}}</h1>
                 </div>
                 <p>{!!Str::limit($getaboutus->description,500)!!}</p>
                 <a href="{{route('aboutus')}}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn
@@ -50,6 +50,65 @@
     </div>
 </div>
 <!-- About End -->
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 d-flex justify-content-between notice-responsive notice-responsive">
+            <div class="notice-section col-lg-6 col-md-6 col-sm-12">
+                <div class="notice">
+                    <div class="manage-notice">
+                        <div class="notice-text">
+                            Notice
+                        </div>
+                    </div>
+                    @foreach ($getnotice as $notice)
+                    <div class="download-notice">
+                        <div class="notice-title">
+                            {{ $notice->title }}
+                        </div>
+                        <div class="notice-date d-flex justify-content-between">
+                            <p> {{ $notice->created_at }}</p>
+                            <a href="{{ route('download.file', $notice->image??'') }}">Download</a>
+                        </div>
+                    </div>
+                    @endforeach
+                    <div class="row mt-4">
+                        <div class="mt-3">
+                            {{ $getnotice->links() }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="notic-section col-lg-6 col-md-6 col-sm-12">
+                <div class="news">
+                    <div class="manage-news">
+                        <div class="news-text">
+                            News/Event
+                        </div>
+                    </div>
+                    @foreach ($getnews as $news)
+                    @if ($news->type == 'news')
+                    <a class="text-decoration-none" href="{{ route('newsevent.details', $news->id) }}">
+                        <div class="main-news">
+                            <div class="news-title">
+                                {{ $news->title }}
+                            </div>
+                            {{-- <!--    {{ $news->time }}--> --}}
+                            <div class="news-date">{{ $news->created_at }}</div>
+                        </div>
+                    </a>
+                    @endif
+                    @endforeach
+                    <div class="row mt-4">
+                        <div class="mt-3">
+                            {{ $getnews->links() }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Academic Start -->
 <div class="container-fluid">
@@ -289,7 +348,7 @@
 <!-- Testimonial End -->
 
 <!-- Blog Start -->
-<div class="container-fluid">
+{{-- <div class="container-fluid">
     <div class="container pt-5 pb-3">
         <div class="text-center mb-5">
             <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">Our Activities</h5>
@@ -298,16 +357,16 @@
         <div class="row pb-3">
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{{asset('frontend/img/a1.jpg')}}" alt="">
+                    <img class="img-fluid" src="{{asset('frontend/img/d.jpeg')}}" alt="">
                     <a class="blog-overlay text-decoration-none" href="">
-                        <h5 class="text-white mb-3">Pre-Teen DSA Dancing Star</h5>
+                        <h5 class="text-white mb-3">Pre-Teen Dancing Star</h5>
                         <p class="text-primary m-0">Jan 28, 2019</p>
                     </a>
                 </div>
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{{asset('frontend/img/a2.jpg')}}" alt="">
+                    <img class="img-fluid" src="{{asset('frontend/img/a2.jpeg')}}" alt="">
                     <a class="blog-overlay text-decoration-none" href="">
                         <h5 class="text-white mb-3">Celebrating Sarswoti Puja</h5>
                         <p class="text-primary m-0">Jan 01, 2020</p>
@@ -316,7 +375,7 @@
             </div>
             <div class="col-lg-4 mb-4">
                 <div class="blog-item position-relative overflow-hidden rounded mb-2">
-                    <img class="img-fluid" src="{{asset('frontend/img/a3.jpg')}}" alt="">
+                    <img class="img-fluid" src="{{asset('frontend/img/a3.jpeg')}}" alt="">
                     <a class="blog-overlay text-decoration-none" href="">
                         <h5 class="text-white mb-3">Food Fastival</h5>
                         <p class="text-primary m-0">Jan 31, 2020</p>
@@ -325,7 +384,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 <!-- Blog End -->
 
 @endsection

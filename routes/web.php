@@ -34,8 +34,8 @@ use App\Http\Controllers\User\MainPageController;
 */
 
 ///////////Login////////////////////////
-Route::get('/ribs-admin-login',[App\Http\Controllers\Auth\LoginController::class,'Login'])->name('login');
-Route::post('/ribs-admin-postlogin',[App\Http\Controllers\Auth\LoginController::class,'PostLogin'])->name('login.perform');
+Route::get('/school-admin-login',[App\Http\Controllers\Auth\LoginController::class,'Login'])->name('login');
+Route::post('/school-admin-postlogin',[App\Http\Controllers\Auth\LoginController::class,'PostLogin'])->name('login.perform');
 
 
 ///////////////////////////Backend////////////////////////////////
@@ -264,9 +264,9 @@ Route::get('create-pdf-file/{id}', [App\Http\Controllers\backend\ScholarshipCont
 
 ///////////////////////////////////////////////////////user///////////////////////////////////////////////////////
 //Auth
-Route::get('/ribs-user-login',[App\Http\Controllers\Userauth\LoginController::class,'UserLogin'])->name('userlogin');
-Route::post('/ribs-user-postlogin',[App\Http\Controllers\Userauth\LoginController::class,'UserPostLogin'])->name('userlogin.perform');
-Route::get('/ribs-logout', [App\Http\Controllers\Userauth\LoginController::class, 'UserLogout'])->name('userlogout');
+Route::get('/school-user-login',[App\Http\Controllers\Userauth\LoginController::class,'UserLogin'])->name('userlogin');
+Route::post('/school-user-postlogin',[App\Http\Controllers\Userauth\LoginController::class,'UserPostLogin'])->name('userlogin.perform');
+Route::get('/school-logout', [App\Http\Controllers\Userauth\LoginController::class, 'UserLogout'])->name('userlogout');
 
 // Route::group(['middleware' => ['auth']],function () {
 //Dashboard
@@ -284,20 +284,20 @@ Route::post('/contact-us',[App\Http\Controllers\User\ContactusController::class,
 Route::get('download/{image}',[MainPageController::class,'download'])->name('download.file');
 
 /***** aboutus *****/
-Route::get('/about-ribs',[App\Http\Controllers\User\AboutUsController::class,'aboutus'])->name('aboutus');
+Route::get('/about-school',[App\Http\Controllers\User\AboutUsController::class,'aboutus'])->name('aboutus');
 Route::get('/academic-programs/{id}',[App\Http\Controllers\User\AboutUsController::class,'academicPrograms'])->name('academic.program');
 Route::get('/master-academic-programs/{id}',[App\Http\Controllers\User\AboutUsController::class,'masterAcademicPrograms'])->name('master.academic.program');
 Route::get('/academic-programs-details/{id}',[App\Http\Controllers\User\AboutUsController::class,'academicProgramsDetails'])->name('academic.details');
 
 /***** message */
-Route::get('/ribs-message',[App\Http\Controllers\User\AboutUsController::class,'getMessage'])->name('ribs.message');
-Route::get('/ribs-message-details/{id}',[App\Http\Controllers\User\AboutUsController::class,'getMessageDetails'])->name('ribs.message.details');
+Route::get('/school-message',[App\Http\Controllers\User\AboutUsController::class,'getMessage'])->name('ribs.message');
+Route::get('/school-message-details/{id}',[App\Http\Controllers\User\AboutUsController::class,'getMessageDetails'])->name('ribs.message.details');
 Route::get('/message-details/{id}',[App\Http\Controllers\User\AboutUsController::class,'getribsMessageDetails'])->name('student.message.details');
 
 
 /****** Event/activities ******/ 
-Route::get('/ribs-activities',[App\Http\Controllers\User\ActivitiesController::class,'getactivities'])->name('ribs.activities');
-Route::get('/ribs-facilities-detail/{id}',[App\Http\Controllers\User\ActivitiesController::class,'getfacilities'])->name('ribs.facilities');
+Route::get('/school-activities',[App\Http\Controllers\User\ActivitiesController::class,'getactivities'])->name('ribs.activities');
+Route::get('/school-facilities-detail/{id}',[App\Http\Controllers\User\ActivitiesController::class,'getfacilities'])->name('ribs.facilities');
 
 /****** notic and news ******/ 
 Route::get('/download-notices-ribs',[App\Http\Controllers\User\NoticeController::class,'allNotice'])->name('all.notice');
@@ -305,45 +305,45 @@ Route::get('/notice-download/{image}',[App\Http\Controllers\User\NoticeControlle
 Route::get('/news-events/{id}',[App\Http\Controllers\User\NoticeController::class,'newsEvents'])->name('newsevent.details');
 
 /****** governance */
-Route::get('/ribs-gqi/{id}',[App\Http\Controllers\User\GovernanceController::class,'allGovernance'])->name('all.governance');
-Route::get('/ribs-downloads',[App\Http\Controllers\User\GovernanceController::class,'allDownload'])->name('all.download');
-Route::get('/ribs-download/{image}',[App\Http\Controllers\User\GovernanceController::class,'Download'])->name('download.download');
+Route::get('/school-gqi/{id}',[App\Http\Controllers\User\GovernanceController::class,'allGovernance'])->name('all.governance');
+Route::get('/school-downloads',[App\Http\Controllers\User\GovernanceController::class,'allDownload'])->name('all.download');
+Route::get('/school-download/{image}',[App\Http\Controllers\User\GovernanceController::class,'Download'])->name('download.download');
 
-Route::get('/ribs-campus-assembly',[App\Http\Controllers\User\GovernanceController::class,'getCampusAssembly'])->name('campus.assembly');
-Route::get('/ribs-cmc',[App\Http\Controllers\User\GovernanceController::class,'getCmc'])->name('cmc');
-Route::get('/ribs-hods',[App\Http\Controllers\User\GovernanceController::class,'getHods'])->name('hods');
-Route::get('/ribs-subject-committiees',[App\Http\Controllers\User\GovernanceController::class,'getSubjectCommittiees'])->name('subject.committiees');
-Route::get('/ribs-different-committiees',[App\Http\Controllers\User\GovernanceController::class,'getDifferentCommittiees'])->name('different.committiees');
-Route::get('/ribs-working-procedure',[App\Http\Controllers\User\GovernanceController::class,'getWorkingProcedure'])->name('working.procedure');
-Route::get('/ribs-governance-details/{id}',[App\Http\Controllers\User\GovernanceController::class,'governanceDetails'])->name('governance.details');
+Route::get('/school-campus-assembly',[App\Http\Controllers\User\GovernanceController::class,'getCampusAssembly'])->name('campus.assembly');
+Route::get('/school-cmc',[App\Http\Controllers\User\GovernanceController::class,'getCmc'])->name('cmc');
+Route::get('/school-hods',[App\Http\Controllers\User\GovernanceController::class,'getHods'])->name('hods');
+Route::get('/school-subject-committiees',[App\Http\Controllers\User\GovernanceController::class,'getSubjectCommittiees'])->name('subject.committiees');
+Route::get('/school-different-committiees',[App\Http\Controllers\User\GovernanceController::class,'getDifferentCommittiees'])->name('different.committiees');
+Route::get('/school-working-procedure',[App\Http\Controllers\User\GovernanceController::class,'getWorkingProcedure'])->name('working.procedure');
+Route::get('/school-governance-details/{id}',[App\Http\Controllers\User\GovernanceController::class,'governanceDetails'])->name('governance.details');
 
 /***** iqac */
-Route::get('/ribs-loi-letter',[App\Http\Controllers\User\IqacController::class,'getLoiLetter'])->name('loi.letter');
-Route::get('/ribs-ssr-report',[App\Http\Controllers\User\IqacController::class,'getSSRReport'])->name('ssr.report');
-Route::get('/ribs-prt-response-report',[App\Http\Controllers\User\IqacController::class,'getPrtResponsereport'])->name('prt.report');
-Route::get('/ribs-sat-activities',[App\Http\Controllers\User\IqacController::class,'getSatActivities'])->name('sat.activities');
-Route::get('/ribs-strategic-plan',[App\Http\Controllers\User\IqacController::class,'getStrategicPlan'])->name('strategic.plan');
-Route::get('/ribs-tracer-study-report',[App\Http\Controllers\User\IqacController::class,'getStudyReport'])->name('study.report');
-Route::get('/ribs-master-plan',[App\Http\Controllers\User\IqacController::class,'getMasterplan'])->name('master.plan');
-Route::get('/ribs-campus-development-plan',[App\Http\Controllers\User\IqacController::class,'getCampusDevelopmentPlan'])->name('development.plan');
-Route::get('/ribs-daily-log-book',[App\Http\Controllers\User\IqacController::class,'getDailyLogBook'])->name('log.book');
-Route::get('/ribs-iqac-details/{id}',[App\Http\Controllers\User\IqacController::class,'getIqacDetails'])->name('iqac.details');
+Route::get('/school-loi-letter',[App\Http\Controllers\User\IqacController::class,'getLoiLetter'])->name('loi.letter');
+Route::get('/school-ssr-report',[App\Http\Controllers\User\IqacController::class,'getSSRReport'])->name('ssr.report');
+Route::get('/school-prt-response-report',[App\Http\Controllers\User\IqacController::class,'getPrtResponsereport'])->name('prt.report');
+Route::get('/school-sat-activities',[App\Http\Controllers\User\IqacController::class,'getSatActivities'])->name('sat.activities');
+Route::get('/school-strategic-plan',[App\Http\Controllers\User\IqacController::class,'getStrategicPlan'])->name('strategic.plan');
+Route::get('/school-tracer-study-report',[App\Http\Controllers\User\IqacController::class,'getStudyReport'])->name('study.report');
+Route::get('/school-master-plan',[App\Http\Controllers\User\IqacController::class,'getMasterplan'])->name('master.plan');
+Route::get('/school-campus-development-plan',[App\Http\Controllers\User\IqacController::class,'getCampusDevelopmentPlan'])->name('development.plan');
+Route::get('/school-daily-log-book',[App\Http\Controllers\User\IqacController::class,'getDailyLogBook'])->name('log.book');
+Route::get('/school-iqac-details/{id}',[App\Http\Controllers\User\IqacController::class,'getIqacDetails'])->name('iqac.details');
 
 /***** rmc */
-Route::get('/ribs-research-activities',[App\Http\Controllers\User\RmcController::class,'getResearch'])->name('research');
-Route::get('/ribs-seminars',[App\Http\Controllers\User\RmcController::class,'getSeminars'])->name('seminar');
-Route::get('/ribs-workshops',[App\Http\Controllers\User\RmcController::class,'getWorkshops'])->name('workshop');
-Route::get('/ribs-training',[App\Http\Controllers\User\RmcController::class,'getTraining'])->name('training');
-Route::get('/ribs-field-trip',[App\Http\Controllers\User\RmcController::class,'getFieldTrip'])->name('fieldtrip');
-Route::get('/ribs-rmc-details/{id}',[App\Http\Controllers\User\RmcController::class,'getRmcDetails'])->name('rmc.details');
+Route::get('/school-research-activities',[App\Http\Controllers\User\RmcController::class,'getResearch'])->name('research');
+Route::get('/school-seminars',[App\Http\Controllers\User\RmcController::class,'getSeminars'])->name('seminar');
+Route::get('/school-workshops',[App\Http\Controllers\User\RmcController::class,'getWorkshops'])->name('workshop');
+Route::get('/school-training',[App\Http\Controllers\User\RmcController::class,'getTraining'])->name('training');
+Route::get('/school-field-trip',[App\Http\Controllers\User\RmcController::class,'getFieldTrip'])->name('fieldtrip');
+Route::get('/school-rmc-details/{id}',[App\Http\Controllers\User\RmcController::class,'getRmcDetails'])->name('rmc.details');
 
 ///Publication
 Route::get('/all-publication/{id}',[App\Http\Controllers\User\PublicationController::class,'allPublication'])->name('all.publication');
-Route::get('/ribs-publication-details/{id}',[App\Http\Controllers\User\PublicationController::class,'publicationDetails'])->name('publication.details');
+Route::get('/school-publication-details/{id}',[App\Http\Controllers\User\PublicationController::class,'publicationDetails'])->name('publication.details');
 
 ///Resource
 Route::get('/all-resource/{id}',[App\Http\Controllers\User\ResourceController::class,'allresource'])->name('all.resource');
-Route::get('/ribs-resource-details/{id}',[App\Http\Controllers\User\ResourceController::class,'resourceDetails'])->name('resource.details');
+Route::get('/school-resource-details/{id}',[App\Http\Controllers\User\ResourceController::class,'resourceDetails'])->name('resource.details');
 
 //addmission form
 Route::get('/online-admission',[AddmissionController::class,'Admission'])->name('admission');

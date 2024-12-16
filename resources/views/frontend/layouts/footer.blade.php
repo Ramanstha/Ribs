@@ -24,7 +24,8 @@ $getaffiliation = Affiliations::where('status',1)->get();
                 <div class="col-md-6">
                     {{-- <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5> --}}
                     @if (!empty($getsitesetting))
-                    <img class="ml-5" src="{{asset('storage/sitesetting/'.$getsitesetting->logo)}}">
+                    <img class="ml-5" style="max-width: 200px;"
+                        src="{{asset('storage/sitesetting/'.$getsitesetting->logo)}}">
                     @endif
                     <p1 class="text-white">{!!$getcontact->description!!}</p1>
                     <p class="text-white"><i class="fa fa-phone-alt mr-2"></i>{{$getcontact->phone}}</p>
@@ -68,11 +69,13 @@ $getaffiliation = Affiliations::where('status',1)->get();
 <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5"
     style="border-color: rgba(256, 256, 256, .1) !important;">
     <div class="row">
+        @if (!empty($getsitesetting))   
         <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-            <p class="m-0 text-white">&copy; <a href="#">RIBS</a>. All Rights Reserved. Designed by <a
+            <p class="m-0 text-white">&copy; <a href="#">{{$getsitesetting->copyright}}</a>. All Rights Reserved. Designed by <a
                     href="https://ramanstha.github.io/Raman-shrestha/" target="_blank">Raman Shrestha</a>
             </p>
         </div>
+        @endif
         <div class="col-lg-6 text-center text-md-right">
             <ul class="nav d-inline-flex">
                 <li class="nav-item">

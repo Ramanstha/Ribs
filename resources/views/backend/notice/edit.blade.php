@@ -64,7 +64,7 @@
                                 @enderror
                             </div>
 
-                            <!--<div class="mb-3">-->
+                            {{-- <!--<div class="mb-3">-->
                             <!--    <label for="example-published-date" class="form-label">Date<span-->
                             <!--            class="text-danger">*</span></label>-->
                                 <input type="hidden" class="form-control" placeholder="Date" name="date"
@@ -72,13 +72,13 @@
                             <!--    @error('date')-->
                             <!--    <span class="text-danger">{{ $message }}</span>-->
                             <!--    @enderror-->
-                            <!--</div>-->
+                            <!--</div>--> --}}
 
-                            <!--<div class="mb-3">-->
+                            {{-- <!--<div class="mb-3">-->
                             <!--    <label for="example-published-time" class="form-label">Time</label>-->
                             <!--    <input type="text" class="form-control" placeholder="Time" name="time"-->
                             <!--        value="{{$data->time}}"/>-->
-                            <!--</div>-->
+                            <!--</div>--> --}}
 
                             <div class="mb-3">
                                 <p class="mb-2">Status<span class="text-danger">*</span></p>

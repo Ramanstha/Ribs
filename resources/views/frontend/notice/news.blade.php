@@ -12,8 +12,8 @@
                 {{ $getNews->title }}
             </h4>
             <div class="program-duration">
-                <h5>Date : <span>{{ $getNews->date }}</span></h5>
-                <h5>Time : <span>{{ $getNews->time }}</span></h5>
+                <h5 class="text-white">Date : <span>{{ $getNews->created_at }}</span></h5>
+                {{-- <h5>Time : <span>{{ $getNews->time }}</span></h5> --}}
 
             </div>
             <p>{!! $getNews->description !!}</p>
