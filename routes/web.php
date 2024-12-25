@@ -182,6 +182,10 @@ Route::get('/contact-edit/{id}',[ContactController::class,'Edit'])->name('edit.c
 Route::post('/contact-update/{id}',[ContactController::class,'Update'])->name('update.contact');
 Route::get('/contact-delete/{id}',[ContactController::class,'Delete'])->name('delete.contact');
 
+
+// Route::get('/updateInbox', [ContactController::class, 'markAsRead']);
+Route::post('/messages/{id}/mark-as-read', [ContactController::class, 'markAsRead'])->name('messages.markAsRead');
+
 Route::get('/user-message/{id}',[ContactController::class,'viewUserMessage'])->name('view_user_message.contact');
 Route::get('/user-contact-message',[ContactController::class,'viewUserContactMessage'])->name('view_user.contact');
 Route::get('/user-contact-delete/{id}',[ContactController::class,'userMessageDelete'])->name('delete_user.contact');

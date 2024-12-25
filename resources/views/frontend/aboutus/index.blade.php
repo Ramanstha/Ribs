@@ -27,7 +27,7 @@
             <div class="about col-lg-7">
                 <div class="text-left mb-4">
                     <h5 class="text-primary text-uppercase mb-3" style="letter-spacing: 5px;">About Us</h5>
-                    <h1 class="text-light">{{$getaboutus->title}}</h1>
+                    <h1 class="text-light text-uppercase">{{$getaboutus->title}}</h1>
                 </div>
                 <p>{!!$getaboutus->description!!}</p>
                 {{-- <a href="{{route('aboutus')}}" class="btn btn-primary py-md-2 px-md-4 font-weight-semi-bold mt-2">Learn

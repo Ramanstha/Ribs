@@ -15,6 +15,8 @@
     <!-- Plugins css -->
     <link href="{{asset('backend/libs/flatpickr/flatpickr.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('backend/libs/selectize/css/selectize.bootstrap3.css')}}" rel="stylesheet" type="text/css" />
+    
+    <link href="{{asset('backend/css/style.css')}}" rel="stylesheet" type="text/css" />
     <!-- Bootstrap css -->
     <link href="{{asset('backend/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
     <!-- App css -->

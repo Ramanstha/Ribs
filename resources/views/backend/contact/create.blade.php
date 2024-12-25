@@ -43,20 +43,9 @@
 
                             <div class="mb-3">
                                 <label for="simpleinput" class="form-label">Address</label>
-                                <textarea type="text" id="address" class="form-control"
-                                    name="address"value="{{old('address')}}">{{old('address')}}</textarea>
+                                <input type="text" id="address" class="form-control"
+                                    name="address"value="{{old('address')}}">
                             </div>
-
-                            <div class="mb-3">
-                                <label for="simpleinput" class="form-label">Description<span
-                                        class="text-danger">*</span></label>
-                                <textarea type="text" id="description" class="form-control"
-                                    name="description"value="{{old('description')}}">{{old('description')}}</textarea>
-                                @error('description')
-                                <span class="text-danger">{{ $message }}</span>
-                                @enderror
-                            </div>
-
                             <button type="submit" class="btn w-sm btn-success waves-effect waves-light mt-4">Add
                                 Contact</button>
                         </form>
@@ -67,9 +56,4 @@
         </div> <!-- end card -->
     </div><!-- end col -->
 </div>
-<script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace('address');
-    CKEDITOR.replace('description');
-</script>
 @endsection

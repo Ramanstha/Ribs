@@ -19,7 +19,7 @@ $getaffiliation = Affiliations::where('status',1)->get();
 <div class="container-fluid bg-dark text-white pt-5 px-sm-3 px-lg-5" style="margin-top: 20px;">
     <div class="row pt-2">
         <div class="col-lg-7 col-md-12">
-            <div class="row">
+            <div class="row footer">    
                 @if(!empty($getcontact))
                 <div class="col-md-6">
                     {{-- <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Get In Touch</h5> --}}
@@ -27,15 +27,16 @@ $getaffiliation = Affiliations::where('status',1)->get();
                     <img class="ml-5" style="max-width: 200px;"
                         src="{{asset('storage/sitesetting/'.$getsitesetting->logo)}}">
                     @endif
-                    <p1 class="text-white">{!!$getcontact->description!!}</p1>
                     <p class="text-white"><i class="fa fa-phone-alt mr-2"></i>{{$getcontact->phone}}</p>
+                    <p class="text-white"><i class="fa fa-location-dot mr-2"></i>{!!$getcontact->address!!}</p>
+                    {{-- <p><i class="fa fa-location-dot mr-2"></i>{!!$getcontact->address!!}</p>   --}}
                     <p class="text-white"><i class="fa fa-envelope mr-2"></i>{{$getcontact->email}}</p>
                 </div>
                 @endif
                 <div class="col-md-6">
                     <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Quick Links</h5>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>AboutUs</a>
+                        <a class="text-white mb-2" href="{{route('aboutus')}}"><i class="fa fa-angle-right mr-2"></i>AboutUs</a>
                         <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Facilities</a>
                         <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Marketing</a>
                         <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Research</a>
@@ -45,7 +46,7 @@ $getaffiliation = Affiliations::where('status',1)->get();
             </div>
         </div>
         <div class="col-lg-5 col-md-12 col-sm-12">
-            <div class="col-md-8">
+            <div class="col-md-8 aff">
                 <h5 class="text-primary text-uppercase mb-4" style="letter-spacing: 5px;">Our Affiliations</h5>
                 <div class="d-flex flex-column justify-content-start">
                     @foreach ($getaffiliation as $affiliation)

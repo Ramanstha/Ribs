@@ -74,8 +74,8 @@
                             <a href="{{route('view.category')}}">
                             <div class="col-6">
                                 <div class="text-end">
-                                    <h3 class="text-dark mt-1"><span data-plugin="counterup">{{App\Models\Governance::count()}}</span></h3>
-                                    <p class="text-dark mb-1 fw-bold text-truncate">Governance/IQAC/RMC</p>
+                                    <h3 class="text-dark mt-1"><span data-plugin="counterup">{{App\Models\Facilities::count()}}</span></h3>
+                                    <p class="text-dark mb-1 fw-bold text-truncate">Facilities</p>
                                 </div>
                             </div>
                         </a>

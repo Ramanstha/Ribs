@@ -19,9 +19,8 @@ class CreateUsercontactsTable extends Migration
             $table->string('email');
             $table->string('address');
             $table->string('phone');
-            $table->string('subject')->nullable();
-            $table->string('country')->nullable();
             $table->longText('message');
+            $table->boolean('is_read')->default(0);
             $table->timestamps();
         });
     }

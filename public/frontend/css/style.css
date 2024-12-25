@@ -11169,6 +11169,14 @@ h6,
     padding-bottom: 0px;
     margin-bottom: -5px;
   }
+
+  .footer,img{
+    height: auto;
+  }
+
+  .aff{
+    margin: 20px 0px 20px -12px;
+  }
 }
 
 .gallery-carousel,
@@ -11417,4 +11425,23 @@ h6,
 
 .program-duration h5 {
   margin: 0px;
+}
+
+
+
+/* contact  */
+
+.d-grid button{
+  background: #44425A;
+  color: white;
+}
+
+.d-grid button:hover{
+  color: #FF6600;
+  font-weight: bold;
+}
+
+/* Footer  */
+.address{
+  margin: -26px 0px 7px 20px;
 }

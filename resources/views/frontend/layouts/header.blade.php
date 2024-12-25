@@ -155,7 +155,7 @@ $publication=Publication::orderBy('id','asc')->where('status',1)->get();
                             </div>
 
                         <a href="{{route('ribs.activities')}}"
-                            class="nav-item nav-link {{ Request::routeIs('ribs.activities') ? 'active' : '' }}">Activities</a>
+                            class="nav-item nav-link {{ Request::routeIs('ribs.activities') ? 'active' : '' }}">Services</a>
 
                         {{-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Blog</a>

@@ -46,14 +46,19 @@ class ContactController extends Controller
         return redirect()->back()->with('message','Data Deleted Successfully');
     }
 
-    public function viewUserMessage($id){
-        $userMessage=Usercontact::findOrfail($id);
-        return view('backend.contact.user_contact_detail',['userMessage'=>$userMessage]);
-    }
 
+    /////////////////User Feedback/message/////////////////
+
+
+    
     public function viewUserContactMessage(){
         $userContactMessage=Usercontact::orderby('id','desc')->get();
         return view('backend.contact.user_contact',['userContactMessage'=>$userContactMessage]);
+    }
+
+    public function viewUserMessage($id){
+        $userMessage=Usercontact::findOrfail($id);
+        return view('backend.contact.user_contact_detail',['userMessage'=>$userMessage]);
     }
 
     public function userMessageDelete($id){
@@ -61,4 +66,16 @@ class ContactController extends Controller
         $userMessageDelete->delete();
         return redirect()->back()->with('message','Data Deleted Successfully');
     }
+
+    public function markAsRead($id){
+    $message = Usercontact::find($id);
+    if ($message) {
+        $message->is_read = !$message->is_read;
+        $message->save();
+
+        return response()->json(['success' => true, 'is_read' => $message->is_read]);
+    }
+    return response()->json(['success' => false, 'message' => 'Message not found'], 404);
+}
+
 }
