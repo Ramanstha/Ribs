@@ -9,6 +9,7 @@ use App\Models\Banner;
 use App\Models\Message;
 use App\Models\ProgramCategory;
 use App\Models\Notice;
+use App\Models\Calender;
 use App\Models\Video;
 use App\Models\Facilities;
 use App\Models\Galleryfeestructure;
@@ -41,6 +42,22 @@ class MainPageController extends Controller
     $path = public_path('storage/notice/'.$image);
     return Response::download($path);
 }
+
+
+///////////////Calender///////////////
+
+public function index()
+    {
+        $events = Event::all();
+        return response()->json($events);
+        return view('frontend.calender',compact('events'));
+    }
+
+    public function store(Request $request)
+    {
+        $event = Event::create($request->all());
+        return response()->json($event);
+    }
 
 
 }

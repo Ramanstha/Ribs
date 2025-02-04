@@ -286,6 +286,8 @@ Route::post('/contact-us',[App\Http\Controllers\User\ContactusController::class,
 
 //notice
 Route::get('download/{image}',[MainPageController::class,'download'])->name('download.file');
+Route::get('/calender', [MainPageController::class, 'index']);
+Route::post('/calenders', [MainPageController::class, 'store']);
 
 /***** aboutus *****/
 Route::get('/about-school',[App\Http\Controllers\User\AboutUsController::class,'aboutus'])->name('aboutus');
